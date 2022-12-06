@@ -1,0 +1,11 @@
+$content = file_get_contents("php://input");
+$update = json_decode($content, true);
+if (($update['message']) != null) {
+    
+    $from_id = $update['message']['from']['id'];
+    $chat_id = $update['message']['chat']['id'];
+    $text = $update['message']['text'];
+    $message_id = $update['message']['message_id']; 
+    $type_msg = "message";
+
+} 
